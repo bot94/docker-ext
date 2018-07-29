@@ -5,5 +5,7 @@ RUN pip install -q docker-compose
 RUN curl -L https://github.com/bot94/envsubst/releases/download/v1.0/envsubst_1.0_`uname -s`_`uname -m`.tar.gz \
     | tar xzf - > envsubst \
     && chmod +x envsubst \
-    && mv envsubst /bin/envsubst
+    && mv envsubst /bin/envsubst \
+    && mkdir $HOME/.ssh
+
 
